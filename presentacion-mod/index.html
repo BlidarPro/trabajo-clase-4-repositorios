@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modificaciones del Codigo - Seccion Contacto</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="slide capa" id="s0">
+  <span class="badge">HTML / CSS / JS</span>
+  <h1>Modificaciones del Codigo</h1>
+  <p class="subtitle">Secuencia de edicion para armar la seccion de contacto</p>
+  <p style="margin-top:30px; max-width:700px;">Cada paso muestra el estado del codigo en ese momento: navbar, seccion, CSS, etiquetas y resultado final.</p>
+  <div class="nav">
+    <button class="primary" onclick="irA(1)">Siguiente →</button>
+  </div>
+  <div class="footer">Presentacion editable · 6 capturas de pantalla</div>
+</section>
+
+<section class="slide paso" id="s1">
+  <span class="step-num">Paso 1 / 6</span>
+  <h2>Landing Page Completa</h2>
+  <p>Vista general de la pagina ya terminada: hero, about, services, registro, la seccion de contacto al final y el footer.</p>
+  <img src="img/landingpage.png" alt="Landing page completa">
+  <div class="nav">
+    <button class="primary" onclick="irA(2)">Siguiente →</button>
+  </div>
+</section>
+
+<section class="slide paso" id="s2">
+  <span class="step-num">Paso 2 / 6</span>
+  <h2>Creando el Navbar</h2>
+  <p>Se aniade el item de contacto al menu principal con el enlace de ancla <code>#contacto</code> (id="conta"), listo para saltar a la seccion.</p>
+  <img src="img/creando-navbar.png" alt="Creando el navbar con contacto">
+  <div class="nav">
+    <button onclick="irA(1)">← Anterior</button>
+    <button class="primary" onclick="irA(3)">Siguiente →</button>
+  </div>
+</section>
+
+<section class="slide paso" id="s3">
+  <span class="step-num">Paso 3 / 6</span>
+  <h2>Creando la Seccion</h2>
+  <p>Se crea la seccion vacia <code>&lt;section class="conta" id="contacto"&gt;</code> con un unico <code>&lt;h2&gt;contacto&lt;/h2&gt;</code>.</p>
+  <img src="img/creacion-seccion.png" alt="Creando la seccion contacto">
+  <div class="nav">
+    <button onclick="irA(2)">← Anterior</button>
+    <button class="primary" onclick="irA(4)">Siguiente →</button>
+  </div>
+</section>
+
+<section class="slide paso" id="s4">
+  <span class="step-num">Paso 4 / 6</span>
+  <h2>Codigo CSS de la Seccion</h2>
+  <p>Se aplica estilo con la clase <code>.contacto</code>: fondo claro, padding de 40px y texto centrado.</p>
+  <img src="img/codigo-css.png" alt="Codigo CSS de la seccion">
+  <div class="nav">
+    <button onclick="irA(3)">← Anterior</button>
+    <button class="primary" onclick="irA(5)">Siguiente →</button>
+  </div>
+</section>
+
+<section class="slide paso" id="s5">
+  <span class="step-num">Paso 5 / 6</span>
+  <h2>Agregando Etiquetas</h2>
+  <p>Se aniaden los contenidos: <code>&lt;h3&gt;Tecnicatura en comercio Electronico&lt;/h3&gt;</code>, el enlace a <code>unpaz</code> y el parrafo <code>Desarrollo Web</code>.</p>
+  <img src="img/agregando-etiquetas.png" alt="Agregando etiquetas a la section">
+  <div class="nav">
+    <button onclick="irA(4)">← Anterior</button>
+    <button class="primary" onclick="irA(6)">Siguiente →</button>
+  </div>
+</section>
+
+<section class="slide paso" id="s6">
+  <span class="step-num">Paso 6 / 6</span>
+  <h2>Vista Final en el Navegador</h2>
+  <p>Resultado renderizado: la seccion contacto con fondo gris claro, centrada, justo antes del footer.</p>
+  <img src="img/vision-final.png" alt="Vision final de la seccion en el navegador">
+  <div class="nav">
+    <button onclick="irA(5)">← Anterior</button>
+    <button class="primary" onclick="irA(0)">Home</button>
+  </div>
+</section>
+
+<script>
+  let actual = 0;
+  function irA(n) {
+    document.getElementById("s"+actual).style.display = "none";
+    actual = n;
+    document.getElementById("s"+actual).style.display = "flex";
+    window.scrollTo(0,0);
+  }
+  document.getElementById("s0").style.display = "flex";
+</script>
+</body>
+</html>
